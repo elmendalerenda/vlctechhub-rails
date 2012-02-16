@@ -1,12 +1,12 @@
 class Event
   include Mongoid::Document
-  field :name, :type => String
-  field :description, :type => String
-  field :day, :type => Int
-  field :month, :type => Int
-  field :year, :type => Int
-  field :organizer, :type => String
-  field :location, :type => String
-  field :location_url, :type => String
-  field :url, :type => String
+  field :name
+  field :description
+  field :day, :type => Integer
+  field :month, :type => Integer
+  field :year, :type => Integer
+  field :organizer
+  field :location
+  field :location_url
+  field :url
 end
