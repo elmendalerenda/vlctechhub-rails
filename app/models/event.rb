@@ -9,4 +9,5 @@ class Event
   field :location
   field :location_url
   field :url
+  field :time
 end

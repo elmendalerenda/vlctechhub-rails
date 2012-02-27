@@ -1,11 +1,11 @@
 class Admin::EventsController < Admin::BaseController
   respond_to :html, :json
-  
+
   # GET /admin/events
   # GET /admin/events.json
   def index
     @events = Event.all
-    
+
     respond_with(:admin, @events)
   end
 
@@ -28,7 +28,7 @@ class Admin::EventsController < Admin::BaseController
   # GET /admin/events/1/edit
   def edit
     @event = Event.find(params[:id])
-    
+
     respond_with(:admin, @event)
   end
 
