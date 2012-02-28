@@ -10,4 +10,5 @@ class Event
   field :location_url
   field :url
   field :time
+  field :icon
 end
