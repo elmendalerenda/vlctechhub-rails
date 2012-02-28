@@ -11,4 +11,5 @@ class Event
   field :url
   field :time
   field :icon
+  field :follow
 end
