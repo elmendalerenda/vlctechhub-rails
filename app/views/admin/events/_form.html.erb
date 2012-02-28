@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.text_area :description, {:size => "40x6"} %>
   </div>
   <div class="field">
     <%= f.label :day %><br />
@@ -54,7 +54,8 @@
   </div>
   <div class="field">
     <%= f.label :icon %><br />
-    <%= f.text_field :icon %>
+    <%= f.select(:icon, options_for_select([['code', 'code'], ['meet', 'meet'], ['conf', 'conf'],['beer', 'beer'] ])) %>
+    <!--<%= f.text_field :icon %>-->
   </div>
   <div class="field">
     <%= f.label :follow %><br />
