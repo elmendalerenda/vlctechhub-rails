@@ -11,6 +11,13 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
+    @events = Event.all
+
+    @events = clean_events(@events)
+    @events = add_week_day(@events)
+
+    respond_with(@events)
   end
+
+
 end
