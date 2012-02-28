@@ -2,7 +2,7 @@ Vlctechhub::Application.routes.draw do
   #root :to => 'events#index'
 
   #match 'events/:id', :to => 'events#show', :as => :event
-  match 'events/(:year)/(:month)(.:format)', :to => 'events#show', :as => :events
+  match 'events/(:year)/(:month)', :to => 'events#show', :as => :events
   match 'mailchimp/(:year)/(:month)', :to => 'events#mailchimp', :as => :mailchimp
 
 

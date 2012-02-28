@@ -16,8 +16,7 @@ class EventsController < ApplicationController
     @events = clean_events(@events)
     @events = add_week_day(@events)
 
-    respond_with(@events)
+    render :json => @events
   end
-
 
 end
