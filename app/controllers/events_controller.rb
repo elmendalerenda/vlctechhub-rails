@@ -1,11 +1,14 @@
 class EventsController < ApplicationController
   respond_to :html, :json
 
-  #def index
-  #  @events = Event.all
+  def mailchimp
+    year = params[:year].to_i
+    month = params[:month].to_i
 
-  #  respond_with(@events)
-  #end
+    @results = Event.all(conditions: {'year' =>year, 'month' => month})
+
+    render :action => "mailchimp"
+  end
 
   def show
     @event = Event.find(params[:id])
