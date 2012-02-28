@@ -7,12 +7,23 @@ App.Services = (function(lng, app, undefined) {
             var month = new Date().getFullYear();
             lng.Service.get(server_url + 'event/', {}, function(response) {
                 var events = response.body;
-                app.Data.addEvents(events);
             });
         };
 
+    var events = [
+    {name: 'Coding Dojo', description: 'Un coding dojo es una reunion que blablabla'}
+    ];
+
+    var parameters = {
+            container_id: 'event-list',
+            template_id: 'event-tmp',
+            data: events
+        };
+    lng.View.Template.List.create(parameters);
+
+
+
     return {
-        lastMonthEvents: lastMonthEvents
 
     }
 

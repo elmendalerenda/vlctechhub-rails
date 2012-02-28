@@ -1,6 +1,13 @@
 App.View = (function(lng, app, undefined) {
 
-    return{
+
+    lng.View.Template.create('event-tmp', '<li>\
+        <span class="onright">{{name}}</span>\
+        <small>{{description}}</small>\
+        </li>');
+
+
+    return {
 
     }
 

@@ -1,8 +1,8 @@
 <!doctype html>
-<html manifest="index.m.appcache">
+<!--<html manifest="index.m.appcache">-->
 <head>
     <meta charset="utf-8">
-    <title>LungoJS</title>
+    <title>VLC Tech Hub</title>
     <meta name="description" content="">
     <meta name="author" content="@elmendalerenda">
     <!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
@@ -35,12 +35,11 @@
 
         <aside></aside>
 
+        <article id="event-list" class="list"></article>
+
+
         <article>
-
-            <a href="#events" data-target="section" data-icon="items" class="button">Go to events</a>
-
-
-
+            <!--<a href="#events" data-target="section" data-icon="items" class="button">Go to events</a>-->
         </article>
     </section>
 
@@ -48,7 +47,7 @@
     <section id="events">
 
         <header data-title="Events for this month">
-          
+
         </header>
 
 
@@ -62,12 +61,17 @@
     </section>
 
     <!-- LungoJS (Production mode) -->
-    <script src="js/lib/lungo.js/lungo-1.1.2.packed.js"></script>
+<script src="js/lib/lungo.js/lib/QuoJS.js"></script>
+    <script src="js/lib/lungo.js/lib/iscroll-lite.js"></script>
+
+    <script src="js/lib/lungo.js/lungo-1.1.2.js"></script>
+
     <!-- LungoJS - Sandbox App -->
     <script src="js/src/mobile/app.js"></script>
     <script src="js/src/mobile/data.js"></script>
     <script src="js/src/mobile/events.js"></script>
-    <script src="js/src/mobile/services.js"></script>
     <script src="js/src/mobile/view.js"></script>
+    <script src="js/src/mobile/services.js"></script>
+
 </body>
 </html>
