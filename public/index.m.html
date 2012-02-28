@@ -27,42 +27,29 @@
         First, you have to do is create a LungoJS Application instance in the file app.js.
         ...and use a Webkit browser as Chrome or Safari.
     -->
-    <section id="hello_world">
-        <header data-title="Hello world!">
+    <section id="index">
+        <header data-title="Eventos este mes">
         </header>
 
         <footer></footer>
-
-        <aside></aside>
 
         <article id="event-list" class="list"></article>
 
-
-        <article>
-            <!--<a href="#events" data-target="section" data-icon="items" class="button">Go to events</a>-->
-        </article>
     </section>
 
+    <section id="eventdetail">
 
-    <section id="events">
+        <header data-title="Event Detail"></header>
 
-        <header data-title="Events for this month">
+        <footer data-back="home"></footer>
 
-        </header>
-
-
-        <footer></footer>
-
-        <aside></aside>
-
-        <article></article>
-
+        <article id="details"></article>
 
     </section>
 
     <!-- LungoJS (Production mode) -->
 <script src="js/lib/lungo.js/lib/QuoJS.js"></script>
-    <script src="js/lib/lungo.js/lib/iscroll-lite.js"></script>
+<script src="js/lib/lungo.js/lib/iscroll-lite.js"></script>
 
     <script src="js/lib/lungo.js/lungo-1.1.2.js"></script>
 
@@ -72,6 +59,7 @@
     <script src="js/src/mobile/events.js"></script>
     <script src="js/src/mobile/view.js"></script>
     <script src="js/src/mobile/services.js"></script>
-
+    <script src="js/src/mobile/boot.js"></script>
+    
 </body>
 </html>

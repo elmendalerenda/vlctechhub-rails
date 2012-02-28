@@ -4,11 +4,12 @@ var App = (function(lng, undefined) {
 
     lng.App.init({
         name: 'vlctechhub',
-        version: '1.0'
+        version: '1.0',
+        events: null
     });
 
-
-
+    lng.App.events = null;
+    
     return {
 
     };
