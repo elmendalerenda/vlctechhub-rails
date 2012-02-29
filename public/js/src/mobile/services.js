@@ -8,17 +8,17 @@ App.Services = (function(lng, app, undefined) {
             });
 */
         return [
-                {name: 'Coding Dojo', description: 'Un coding dojo es una reunion que blablabla'},
-                {name: 'Agile Levante', description: 'En AgileLevante hablamos de agilismo'}
+                {name: 'Coding Dojo', icon:"beer", description: 'Un coding dojo es una reunion que blablabla'},
+                {name: 'Agile Levante', icon:"meet", description: 'En AgileLevante hablamos de agilismo'}
         ];
     };
 
     var findEvents = function(){
         var events = lastMonthEvents();
-        events = addIndexToEvents(events);        
+        events = addIndexToEvents(events);
 
-        lng.App.events = events;        
-    
+        lng.App.events = events;
+
         var parameters = {
                 container_id: app.View.index_container,
                 template_id: app.View.index_template,
@@ -27,10 +27,10 @@ App.Services = (function(lng, app, undefined) {
         lng.View.Template.List.create(parameters);
 
     };
-        
+
     var addIndexToEvents = function(events){
         for(var i=0; i < events.length; i++ ){
-            events[i].index = i;        
+            events[i].index = i;
         }
         return events;
     };

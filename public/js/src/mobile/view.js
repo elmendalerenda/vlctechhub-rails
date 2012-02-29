@@ -5,11 +5,12 @@ App.View = (function(lng, app, undefined) {
     var detail_container = 'details';
     var index_container = 'event-list';
 
-    lng.View.Template.create(index_template, '<li data-event="{{index}}"  class="event_tap">\
+    lng.View.Template.create(index_template, '<li data-event="{{index}}"  class="event_tap ">\
+        <div class="{{icon}}"></div>\
         <span class="onright">{{name}}</span>\
         <small>{{description}}</small>\
         </li>');
-    
+
     lng.View.Template.create(detail_template, '<span>Name:</span> <span>{{name}}</span><br/>  \
         <span>Description:</span> <span>{{descripcion}}</span><br/>');
 

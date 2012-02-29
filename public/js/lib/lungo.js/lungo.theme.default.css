@@ -1,3 +1,12 @@
+
+
+.list div.beer {
+    background-image: url(http://vlctechhub.org/img/beer-mug.png);
+    background-repeat: no-repeat;
+    background-size: 27px;
+    height: 27px;
+}
+
 /**
  * Stylesheet
  *
@@ -11,9 +20,9 @@
 }
 /* @group <header> & <footer> & <article> */
 header {
-  background-color: #91bd09;
-  border-top: 1px solid #b7de3f;
-  border-bottom: 1px solid #758e29;
+  background-color: #FBDE16;
+  border-top: 1px solid #F0FB16;
+  border-bottom: 1px solid #FBE816;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
 }
 footer {
@@ -21,7 +30,7 @@ footer {
   border-top: 1px inset #1c1c1c;
 }
 .title {
-  color: #ffffff;
+  color: #000;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
 }
 article {
