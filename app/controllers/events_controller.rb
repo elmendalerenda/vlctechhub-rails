@@ -7,6 +7,9 @@ class EventsController < ApplicationController
 
     @results = Event.all(conditions: {'year' =>year, 'month' => month})
 
+    @results = clean_events(@results)
+    @results = add_week_day(@results)
+
     render :action => "mailchimp"
   end
 

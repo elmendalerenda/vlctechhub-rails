@@ -11,7 +11,7 @@ end
 
 def add_week_day(events)
     events.each {|x|
-        wday = Time.local(x['year'], x['month'], x['date']).wday
+        wday = Time.local(x['year'], x['month'], x['day']).wday
         case wday
         when 0
             x['wday'] = 'Domingo'
