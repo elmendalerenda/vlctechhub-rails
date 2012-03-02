@@ -1,16 +1,21 @@
 
 .event-title{
-    
     padding-left: 10px;
     padding-top: 7px;
-    
+}
+
+.list div.event-icon{
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
 }
 
 .list div.beer {
     background-image: url(/images/beer-mug.png);
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: center;
+}
+
+.list div.code {
+    background-image: url(/images/laptop.png);
 }
 
 .event-day {

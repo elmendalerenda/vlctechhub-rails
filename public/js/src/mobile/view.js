@@ -7,7 +7,7 @@ App.View = (function(lng, app, undefined) {
 
     lng.View.Template.create(index_template, '<li data-event="{{index}}" class="event_tap grey">\
         <div class="onleft">\
-            <div class="{{icon}} icon"></div>\
+            <div class="event-icon {{icon}} icon"></div>\
             <div class="onleft">\
                 <small class="event-wday" >{{wday}}</small>\
                 <small class="event-day">{{day}}</small>\

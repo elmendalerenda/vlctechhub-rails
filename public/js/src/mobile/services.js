@@ -1,21 +1,14 @@
 App.Services = (function(lng, app, undefined) {
 
-    var lastMonthEvents = function() {
-/*            var year = new Date().getMonth() + 1;
-            var month = new Date().getFullYear();
-            lng.Service.get('/event/', {}, function(response) {
-                var events = response.body;
-            });
-*/
-        return [
-                {name: 'Coding Dojo', day: 12, wday: 'Lunes', icon:"beer", description: 'Un coding dojo es una reunion que blablabla'},
-                {name: 'Agile Levante', day: 12, wday: 'Lunes', icon:"meet", description: 'En AgileLevante hablamos de agilismo'},
-                {name: 'Agile Levante', day: 12, wday: 'Lunes', icon:"meet", description: 'En AgileLevante hablamos de agilismo'}
-        ];
+    var findEvents = function() {
+        var year = new Date().getMonth() + 1;
+        var month = new Date().getFullYear();
+        lng.Service.get('/events/', {}, function(response) {
+            drawEvents(response);
+        });
     };
 
-    var findEvents = function(){
-        var events = lastMonthEvents();
+    var drawEvents = function(events){
         events = addIndexToEvents(events);
 
         lng.App.events = events;
@@ -35,7 +28,6 @@ App.Services = (function(lng, app, undefined) {
         }
         return events;
     };
-
 
     return {
         findEvents: findEvents
