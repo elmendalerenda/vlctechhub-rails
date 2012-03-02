@@ -8,8 +8,9 @@ App.Services = (function(lng, app, undefined) {
             });
 */
         return [
-                {name: 'Coding Dojo', icon:"beer", description: 'Un coding dojo es una reunion que blablabla'},
-                {name: 'Agile Levante', icon:"meet", description: 'En AgileLevante hablamos de agilismo'}
+                {name: 'Coding Dojo', day: 12, wday: 'Lunes', icon:"beer", description: 'Un coding dojo es una reunion que blablabla'},
+                {name: 'Agile Levante', day: 12, wday: 'Lunes', icon:"meet", description: 'En AgileLevante hablamos de agilismo'},
+                {name: 'Agile Levante', day: 12, wday: 'Lunes', icon:"meet", description: 'En AgileLevante hablamos de agilismo'}
         ];
     };
 

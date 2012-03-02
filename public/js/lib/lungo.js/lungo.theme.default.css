@@ -1,10 +1,30 @@
 
+.event-title{
+    
+    padding-left: 10px;
+    padding-top: 7px;
+    
+}
 
 .list div.beer {
-    background-image: url(http://vlctechhub.org/img/beer-mug.png);
+    background-image: url(/images/beer-mug.png);
     background-repeat: no-repeat;
-    background-size: 27px;
-    height: 27px;
+    background-size: 25px;
+    background-position: center;
+}
+
+.event-day {
+    text-align: center;
+}
+
+li div.onright{
+    float: right !important;
+    padding-top: 10px;
+    clear: right;
+}
+
+.list li.event_tap{
+    padding: 0px 6px 32px 8px;
 }
 
 /**
