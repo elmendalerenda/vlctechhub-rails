@@ -10,6 +10,10 @@ App.Services = (function(lng, app, undefined) {
 
     var drawEvents = function(events){
         events = addIndexToEvents(events);
+        
+        for(var i=0; i < events.length; i++ ){
+                events[i].image = '/images/laptop.png'
+        }
 
         lng.App.events = events;
 

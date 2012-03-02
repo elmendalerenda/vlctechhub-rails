@@ -17,8 +17,18 @@ App.View = (function(lng, app, undefined) {
         <div class="onright"><span class="icon right"></span> </div>\
         </li>');
 
-    lng.View.Template.create(detail_template, '<span>Name:</span> <span>{{name}}</span><br/>  \
-        <span>Description:</span> <span>{{descripcion}}</span><br/>');
+    lng.View.Template.create(detail_template,
+        '<h1>\
+            <img src="{{image}}" \>\
+            {{organizer}}\
+        </h1>\
+        <ul>\
+            <li>{{name}}</li>\
+            <li>{{wday}} {{day}} {{time}}</li>\
+            <li>{{location}} {{location_url}}</li>\
+            <li>{{description}}</li><br/>\
+            <li>Si quieres saber más: {{follow}}</li>\
+        </ul>');
 
     return {
         index_template: index_template,

@@ -1,4 +1,17 @@
 
+
+/*detail classes */
+#details h1{
+    text-align: center;
+}
+
+#details ul{
+    list-style-type: none
+}
+
+/* end detail classes */
+
+/* index classes*/
 .event-title{
     padding-left: 10px;
     padding-top: 7px;
@@ -31,6 +44,8 @@ li div.onright{
 .list li.event_tap{
     padding: 0px 6px 32px 8px;
 }
+
+/* end index classes*/
 
 /**
  * Stylesheet
