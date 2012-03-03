@@ -1,33 +1,23 @@
 App.Services = (function(lng, app, undefined) {
 
     var findEvents = function() {
-        var year = new Date().getMonth() + 1;
-        var month = new Date().getFullYear();
-        lng.Service.get('/events/', {}, function(response) {
-            drawEvents(response);
-        });
+        var month = new Date().getMonth() + 1,
+            year = new Date().getFullYear(),
+            url = '/events/'+year+'/'+ month;
+        
+        lng.Service.get(url, {}, displayEvents);
     };
 
-    var drawEvents = function(events){
+    var displayEvents = function(events){
         events = addIndexToEvents(events);
         
-        for(var i=0; i < events.length; i++ ){
-                events[i].image = '/images/laptop.png'
-        }
-
         lng.App.events = events;
 
-        var parameters = {
-                container_id: app.View.index_container,
-                template_id: app.View.index_template,
-                data: events
-            };
-        lng.View.Template.List.create(parameters);
-
+        app.View.drawEventIndex(events);
     };
 
     var addIndexToEvents = function(events){
-        for(var i=0; i < events.length; i++ ){
+        for(var i=0; i < events.length; i++){
             events[i].index = i;
         }
         return events;

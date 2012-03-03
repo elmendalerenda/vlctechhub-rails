@@ -1,9 +1,4 @@
 App.Events = (function(lng, app, undefined) {
-
-    // try when mobile
-    //lng.dom('#details').swipeRight(function(event) {
-    //    lng.Router.section('#hello_world');                                  
-    //});
     
     lng.dom('.event_tap').tap(function(event) {
         var selectedIndex = event.currentTarget.getAttribute('data-event');

@@ -45,11 +45,19 @@ App.View = (function(lng, app, undefined) {
         lng.View.Template.Binding.create(detail_container, detail_template, event);
         lng.View.Template.Binding.create(detail_footer_container, detail_footer_template, event);
     };
+    
+    var drawEventIndex = function(events){
+         var parameters = {
+                container_id: index_container,
+                template_id: index_template,
+                data: events
+            };
+        lng.View.Template.List.create(parameters);
+    };
 
     return {
-        index_template: index_template,
-        index_container: index_container,
-        drawEventDetail: drawEventDetail
+        drawEventDetail: drawEventDetail,
+        drawEventIndex: drawEventIndex
     }
 
 })(LUNGO, App);
