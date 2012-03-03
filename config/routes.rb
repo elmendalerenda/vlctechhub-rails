@@ -4,8 +4,9 @@ Vlctechhub::Application.routes.draw do
   match 'events/:id', :to => 'events#show', :as => :event
   match 'events/(:year)/(:month)', :to => 'events#show', :as => :events1
   match 'mailchimp/(:year)/(:month)', :to => 'events#mailchimp', :as => :mailchimp
-
-
+  
+  match 'mobile', :to => 'mobile#show'
+ 
   namespace :admin do resources :events end
 
   # The priority is based upon order of creation:
