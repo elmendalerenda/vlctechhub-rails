@@ -9,7 +9,7 @@ App.View = (function(lng, app, undefined) {
     var detail_head_container = 'eventdetail .title'
     var detail_head_template = 'detail_head_template'
 
-    lng.View.Template.create(index_template, '<li data-event="{{index}}" class="event_tap grey">\
+    lng.View.Template.create(index_template, '<li data-event="{{index}}" class="event_tap">\
         <div class="onleft">\
             <div class="event-icon {{icon}} icon"></div>\
             <div class="onleft">\

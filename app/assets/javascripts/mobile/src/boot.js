@@ -17,7 +17,7 @@ App.Boot = (function(lng, app, undefined) {
         month[11]="Diciembre";
 
         var head = lng.dom('#index-header span');
-        head[0].innerHTML = "Eventos de " + month[d.getMonth()];
+        head[0].innerHTML = "VLCTechHub " + month[d.getMonth()];
     };
 
     setIndexHeaderText();

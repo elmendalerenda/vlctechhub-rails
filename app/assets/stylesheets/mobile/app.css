@@ -1,5 +1,9 @@
 /*detail classes */
 
+header {
+    background-color: black;
+}
+
 header .title, footer .title {
     font-size: 2em;
 }
@@ -40,6 +44,11 @@ li.description{
 .event-title{
     padding-left: 10px;
     padding-top: 7px;
+    color: black
+}
+
+.title{
+    color: #FBDE16;
 }
 
 .list div.event-icon{
@@ -72,8 +81,14 @@ li div.onright{
 }
 
 .list li.event_tap{
-    padding: 0px 6px 32px 8px;
+    background-color: #FBDE16;
+    padding: 8px 6px 35px 8px;
     clear: both;
-    height: 25px;
+    border-bottom: 2px inset #333;
 }
+
+.event_tap .icon{
+    color: #333;
+}
+
 /* end index classes*/
