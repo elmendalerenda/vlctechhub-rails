@@ -1,5 +1,9 @@
 class EventsController < ApplicationController
   respond_to :html, :json
+  
+  def home
+      render :action => "home"
+  end
 
   def mailchimp
     year = params[:year].to_i
