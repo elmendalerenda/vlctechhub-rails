@@ -56,6 +56,11 @@ li.description{
     background-image: url(/images/laptop.png);
 }
 
+.list div.meet {
+    background-image: url(/images/gathering.png);
+}
+
+
 .event-day {
     text-align: center;
 }
@@ -68,5 +73,7 @@ li div.onright{
 
 .list li.event_tap{
     padding: 0px 6px 32px 8px;
+    clear: both;
+    height: 25px;
 }
 /* end index classes*/
