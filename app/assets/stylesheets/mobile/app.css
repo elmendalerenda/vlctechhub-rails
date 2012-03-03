@@ -49,15 +49,15 @@ li.description{
 }
 
 .list div.beer {
-    background-image: url(/images/beer-mug.png);
+    background-image: url('/assets/beer-mug.png');
 }
 
 .list div.code {
-    background-image: url(/images/laptop.png);
+    background-image: url('/assets/laptop.png');
 }
 
 .list div.meet {
-    background-image: url(/images/gathering.png);
+    background-image: url('/assets/gathering.png');
 }
 
 
