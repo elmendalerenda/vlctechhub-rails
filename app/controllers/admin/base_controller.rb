@@ -1,3 +1,5 @@
 class Admin::BaseController < ApplicationController
-  http_basic_authenticate_with :name => ENV['ADMIN_USER'], :password => ENV['ADMIN_PASSWORD']
+  user = ENV['ADMIN_USER'] || 'test'
+  pass = ENV['ADMIN_PASSWORD'] || 'test'
+  http_basic_authenticate_with :name => user, :password => pass
 end
