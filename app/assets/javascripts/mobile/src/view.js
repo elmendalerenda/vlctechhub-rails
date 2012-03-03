@@ -18,7 +18,9 @@ App.View = (function(lng, app, undefined) {
             </div>\
             <div class="event-title onleft">{{name}}</div>\
         </div>\
-        <div class="onright"><span class="icon right"></span> </div>\
+        <div class="onright">\
+            <span class="icon right"></span>\
+        </div>\
         </li>');
 
     lng.View.Template.create(detail_template,

@@ -1,12 +1,15 @@
-/*detail classes */
 
 header {
     background-color: black;
 }
 
 header .title, footer .title {
+    color: #FBDE16;
     font-size: 2em;
+
 }
+
+/*detail*/
 
 #details {
     color: white;
@@ -38,17 +41,14 @@ li.description{
     padding-top: 10px;
     padding-right: 10px;
 }
-/* end detail classes */
+/* end detail*/
 
-/* index classes*/
+/* index*/
+
 .event-title{
     padding-left: 10px;
     padding-top: 7px;
     color: black
-}
-
-.title{
-    color: #FBDE16;
 }
 
 .list div.event-icon{
@@ -69,7 +69,6 @@ li.description{
     background-image: url('/assets/gathering.png');
 }
 
-
 .event-day {
     text-align: center;
 }
@@ -82,7 +81,7 @@ li div.onright{
 
 .list li.event_tap{
     background-color: #FBDE16;
-    padding: 8px 6px 35px 8px;
+    padding: 4px 6px 35px 8px;
     clear: both;
     border-bottom: 2px inset #333;
 }
@@ -91,4 +90,16 @@ li div.onright{
     color: #333;
 }
 
-/* end index classes*/
+.list small.event-wday{
+    background-color: black;
+    color: white;
+    font-size: x-small; 
+    padding: 2px;
+}
+
+.event-day{
+    background-color: #FE9;
+    color: black;
+    border: 1px solid black;
+}
+/* end index*/
