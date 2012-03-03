@@ -6,9 +6,10 @@ App.Events = (function(lng, app, undefined) {
     //});
     
     lng.dom('.event_tap').tap(function(event) {
-        var selected = event.currentTarget.getAttribute('data-event');
+        var selectedIndex = event.currentTarget.getAttribute('data-event');
+        var selectedEvent = lng.App.events[selectedIndex];
         
-        lng.View.Template.Binding.create(app.View.detail_container, app.View.detail_template, lng.App.events[selected]);
+        app.View.drawEventDetail(selectedEvent);
         
         lng.Router.section('#eventdetail');
     });

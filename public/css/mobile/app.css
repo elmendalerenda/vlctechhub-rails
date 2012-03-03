@@ -1,0 +1,72 @@
+/*detail classes */
+
+header .title, footer .title {
+    font-size: 2em;
+}
+
+#details {
+    color: white;
+    background-color: #111;
+}
+
+#details h1{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1.5em;
+}
+
+#details ul{
+    list-style-type: none;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#details li{
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+#details li span{
+    color: #FBDE16;
+}
+
+li.description{
+    padding-top: 10px;
+    padding-right: 10px;
+}
+/* end detail classes */
+
+/* index classes*/
+.event-title{
+    padding-left: 10px;
+    padding-top: 7px;
+}
+
+.list div.event-icon{
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+
+.list div.beer {
+    background-image: url(/images/beer-mug.png);
+}
+
+.list div.code {
+    background-image: url(/images/laptop.png);
+}
+
+.event-day {
+    text-align: center;
+}
+
+li div.onright{
+    float: right !important;
+    padding-top: 10px;
+    clear: right;
+}
+
+.list li.event_tap{
+    padding: 0px 6px 32px 8px;
+}
+/* end index classes*/
