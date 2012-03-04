@@ -2,7 +2,13 @@ class EventsController < ApplicationController
   respond_to :html, :json
   
   def home
+
+    if request.env['HTTP_USER_AGENT'].downcase.index('applewebkit/')
+      redirect_to :controller=>'mobile', :action => 'show'
+    else 
       render :action => "home"
+    end
+    
   end
 
   def mailchimp
