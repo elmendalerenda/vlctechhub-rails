@@ -32,26 +32,26 @@ App.View = (function(lng, app, undefined) {
             <li><span>Donde: </span>{{location}}</li>\
             <li class="description">{{description}}</li>\
         </ul>');
-    
+
     lng.View.Template.create(detail_footer_template,
         '<a class="button" href="{{location_url}}"><span class="icon map"></span></a>\
         <a class="button" href="{{follow}}"><span class="icon plus"></span></a>');
-    
+
     lng.View.Template.create(detail_head_template,
         '{{organizer}}');
-    
-    var drawEventDetail = function(event){
+
+    var drawEventDetail = function(event) {
         lng.View.Template.Binding.create(detail_head_container, detail_head_template, event);
         lng.View.Template.Binding.create(detail_container, detail_template, event);
         lng.View.Template.Binding.create(detail_footer_container, detail_footer_template, event);
     };
-    
-    var drawEventIndex = function(events){
+
+    var drawEventIndex = function(events) {
          var parameters = {
-                container_id: index_container,
-                template_id: index_template,
-                data: events
-            };
+            container_id: index_container,
+            template_id: index_template,
+            data: events
+        };
         lng.View.Template.List.create(parameters);
     };
 
