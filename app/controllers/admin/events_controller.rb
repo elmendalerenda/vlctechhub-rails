@@ -4,7 +4,7 @@ class Admin::EventsController < Admin::BaseController
   # GET /admin/events
   # GET /admin/events.json
   def index
-    @events = Event.all
+    @events = Event.all(sort: [[:month, :asc],[:day, :asc]] )
 
     respond_with(:admin, @events)
   end

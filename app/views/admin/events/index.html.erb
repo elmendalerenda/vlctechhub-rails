@@ -3,14 +3,11 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Description</th>
     <th>Day</th>
     <th>Month</th>
     <th>Year</th>
     <th>Organizer</th>
     <th>Location</th>
-    <th>Location url</th>
-    <th>Url</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,14 +16,11 @@
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
-    <td><%= event.description %></td>
     <td><%= event.day %></td>
     <td><%= event.month %></td>
     <td><%= event.year %></td>
     <td><%= event.organizer %></td>
     <td><%= event.location %></td>
-    <td><%= event.location_url %></td>
-    <td><%= event.url %></td>
     <td><%= event.time %></td>
     <td><%= link_to 'Show', [:admin, event] %></td>
     <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
