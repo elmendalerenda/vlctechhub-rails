@@ -32,3 +32,25 @@
 <br />
 
 <%= link_to 'New Event', new_admin_event_path %>
+
+<h2>Clone Events</h2>
+
+<%= form_tag clone_admin_events_path do %>
+<p>
+  <%= label_tag :year_from %>
+  <%= text_field_tag :year_from %>
+</p>
+<p>
+  <%= label_tag :month_from %>
+  <%= text_field_tag :month_from %>
+</p>
+<p>
+  <%= label_tag :year_to %>
+  <%= text_field_tag :year_to %>
+</p>
+<p>
+  <%= label_tag :month_to %>
+  <%= text_field_tag :month_to %>
+</p>
+<%= submit_tag 'Clone' %>
+<% end %>

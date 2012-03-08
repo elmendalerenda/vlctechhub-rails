@@ -57,4 +57,10 @@ class Admin::EventsController < Admin::BaseController
 
     respond_with(:admin, @event)
   end
+  
+  def clone
+    Event.clone_month_events(params[:year_from], params[:month_from], 
+      params[:year_to], params[:month_to])
+    redirect_to :action => :index
+  end
 end

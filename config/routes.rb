@@ -7,7 +7,13 @@ Vlctechhub::Application.routes.draw do
   
   match 'mobile', :to => 'mobile#show'
  
-  namespace :admin do resources :events end
+  namespace :admin do
+    resources :events do
+      collection do
+        post :clone
+      end
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
