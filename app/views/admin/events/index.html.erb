@@ -30,7 +30,7 @@
     <td><%= event.time %></td>
     <td><%= link_to 'Show', [:admin, event] %></td>
     <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Destroy', [:admin, event], confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
