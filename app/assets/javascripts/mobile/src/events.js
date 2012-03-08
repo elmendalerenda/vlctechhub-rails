@@ -1,6 +1,8 @@
 App.Events = (function(lng, app, undefined) {
 
-    lng.ready(function(event) {
+
+    $$(document).ready(function(event) {
+        console.log('ready');
         app.setIndexHeaderText();
         app.Services.findEvents();
     });
