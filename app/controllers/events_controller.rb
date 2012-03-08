@@ -2,13 +2,11 @@ class EventsController < ApplicationController
   respond_to :html, :json
   
   def home
-
-    if request.env['HTTP_USER_AGENT'].downcase.index('applewebkit/')
+    if Vlctechhub::Mobile.is_mobile?(request.user_agent)
       redirect_to :controller=>'mobile', :action => 'show'
     else 
       render :action => "home"
     end
-    
   end
 
   def mailchimp

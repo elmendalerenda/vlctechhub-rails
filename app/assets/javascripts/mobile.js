@@ -5,5 +5,5 @@
 //= require ./mobile/src/events.js
 //= require ./mobile/src/view.js
 //= require ./mobile/src/services.js
-//= require ./mobile/src/boot.js
+
 
