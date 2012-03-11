@@ -1,3 +1,38 @@
-// Place all the styles related to the Admin::Events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#clone_events { padding-top: 40px; }
+
+.icon {
+  margin-left: 10px;
+  
+  &.code{
+    min-height:44px;
+    padding-left:55px;
+    padding-top:6px;
+    background-image:url('http://vlctechhub.org/img/laptop.png');
+    background-color:transparent;
+    background-repeat:no-repeat;
+  }
+  &.beer{
+    min-height:44px;
+    padding-left:55px;
+    padding-top:6px;
+    background-image:url('http://vlctechhub.org/img/beer-mug.png');
+    background-color:transparent;
+    background-repeat:no-repeat;
+  }
+  &.conf{
+    min-height:44px;
+    padding-left:55px;
+    padding-top:6px;
+    background-image:url('http://vlctechhub.org/img/microphone.png');
+    background-color:transparent;
+    background-repeat:no-repeat;
+  }
+  &.meet{
+    min-height:44px;
+    padding-left:55px;
+    padding-top:6px;
+    background-image:url('http://vlctechhub.org/img/gathering.png');
+    background-color:transparent;
+    background-repeat:no-repeat;
+  }
+}

@@ -3,11 +3,10 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.1'
 
 gem 'mongoid', '~> 2.4.4'
+gem 'dynamic_form'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,6 +18,7 @@ group :assets do
   gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'

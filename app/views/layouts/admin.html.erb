@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VLCTechHub</title>
+  <%= stylesheet_link_tag    "admin", :media => "all" %>
+  <%= javascript_include_tag "admin" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render 'shared/admin/navbar' %>
+  
+  <div class="container">
+    <%= yield %>
+  </div>
+</body>
+</html>

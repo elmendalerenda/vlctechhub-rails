@@ -1,66 +1,69 @@
-<p id="notice"><%= notice %></p>
+<h1>Event</h1>
 
 <p>
-  <b>Name:</b>
+  <br>
+  <b>Name</b><br>
   <%= @event.name %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Description</b><br>
   <%= @event.description %>
 </p>
 
 <p>
-  <b>Day:</b>
+  <b>Day</b><br>
   <%= @event.day %>
 </p>
 
-
 <p>
-  <b>Time:</b>
-  <%= @event.time %>
-</p>
-
-<p>
-  <b>Month:</b>
+  <b>Month</b><br>
   <%= @event.month %>
 </p>
 
 <p>
-  <b>Year:</b>
+  <b>Year</b><br>
   <%= @event.year %>
 </p>
 
 <p>
-  <b>Organizer:</b>
+  <b>Time</b><br>
+  <%= @event.time %>
+</p>
+
+<p>
+  <b>Organizer</b><br>
   <%= @event.organizer %>
 </p>
 
 <p>
-  <b>Location:</b>
+  <b>Location</b><br>
   <%= @event.location %>
 </p>
 
 <p>
-  <b>Location url:</b>
+  <b>Location url</b><br>
   <%= @event.location_url %>
 </p>
 
 <p>
-  <b>Icon:</b>
-  <%= @event.icon %>
-</p>
-
-<p>
-  <b>Url:</b>
+  <b>Url</b><br>
   <%= @event.url %>
 </p>
 
 <p>
-  <b>Follow:</b>
+  <b>Icon</b><br>
+  <code><%= @event.icon %></code>
+  <span class="icon <%= @event.icon %>">
+</p>
+
+<p>
+  <b>Follow</b><br>
   <%= @event.follow %>
 </p>
 
-
-<%= link_to 'Edit', edit_admin_event_path(@event) %> |
-<%= link_to 'Back', admin_events_path %>
+<div class="form-actions">
+  <%= link_to 'Back', admin_events_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_admin_event_path(@event), :class => 'btn' %>
+  <%= link_to 'Delete', admin_event_path(@event), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

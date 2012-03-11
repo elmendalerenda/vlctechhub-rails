@@ -1,56 +1,68 @@
-<h1>Listing events</h1>
+<div class="row">
+  <div class="span12">
+    <h1>Events</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Organizer</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @events.each do |event| %>
+          <tr>
+            <td><%= link_to(event.name, edit_admin_event_path(event)) %></td>
+            <td><%= l Date.new(event.year, event.month, event.day), :format => :long %></td>
+            <td><%= event.organizer %></td>
+            <td><%= event.location %></td>
+            <td>
+              <%= link_to 'Edit', edit_admin_event_path(event), :class => 'btn btn-mini' %>
+              <%= link_to 'Destroy', admin_event_path(event), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Day</th>
-    <th>Month</th>
-    <th>Year</th>
-    <th>Organizer</th>
-    <th>Location</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <%= link_to 'New', new_admin_event_path, :class => 'btn btn-primary' %>
+  </div>
+</div>
 
-<% @events.each do |event| %>
-  <tr>
-    <td><%= event.name %></td>
-    <td><%= event.day %></td>
-    <td><%= event.month %></td>
-    <td><%= event.year %></td>
-    <td><%= event.organizer %></td>
-    <td><%= event.location %></td>
-    <td><%= event.time %></td>
-    <td><%= link_to 'Show', [:admin, event] %></td>
-    <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
-    <td><%= link_to 'Destroy', [:admin, event], confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="clone_events" class="row">
+  <div class="span12">
+    <%= form_tag clone_admin_events_path do %>
+      <fieldset>
+        <legend>Clone Events</legend>
 
-<br />
-
-<%= link_to 'New Event', new_admin_event_path %>
-
-<h2>Clone Events</h2>
-
-<%= form_tag clone_admin_events_path do %>
-<p>
-  <%= label_tag :year_from %>
-  <%= text_field_tag :year_from %>
-</p>
-<p>
-  <%= label_tag :month_from %>
-  <%= text_field_tag :month_from %>
-</p>
-<p>
-  <%= label_tag :year_to %>
-  <%= text_field_tag :year_to %>
-</p>
-<p>
-  <%= label_tag :month_to %>
-  <%= text_field_tag :month_to %>
-</p>
-<%= submit_tag 'Clone' %>
-<% end %>
+        <div class="control-group">
+          <%= label_tag :year_from, nil, :class => 'control-label' %>
+          <div class="controls">
+            <%= text_field_tag :year_from, Date.today.year, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= label_tag :month_from, nil, :class => 'control-label' %>
+          <div class="controls">
+            <%= text_field_tag :month_from, Date.today.month, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= label_tag :year_to, nil, :class => 'control-label' %>
+          <div class="controls">
+            <%= text_field_tag :year_to, clone_year_to, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= label_tag :month_to, nil, :class => 'control-label' %>
+          <div class="controls">
+            <%= text_field_tag :month_to, Date.today.advance(:months => 1).month, :class => 'text_field' %>
+          </div>
+        </div>
+    
+        <%= submit_tag 'Clone', :class => 'btn btn-primary' %>
+      </fieldset>
+    <% end %>
+  </div>
+</div>

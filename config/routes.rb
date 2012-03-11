@@ -4,9 +4,11 @@ Vlctechhub::Application.routes.draw do
   match 'events/:id', :to => 'events#show', :as => :event
   match 'events/(:year)/(:month)', :to => 'events#show', :as => :events1
   match 'mailchimp/(:year)/(:month)', :to => 'events#mailchimp', :as => :mailchimp
-  
+
   match 'mobile', :to => 'mobile#show'
- 
+
+  match 'admin' => redirect('/admin/events')
+  
   namespace :admin do
     resources :events do
       collection do

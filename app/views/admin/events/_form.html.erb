@@ -1,68 +1,96 @@
-<%= form_for [:admin, @event] do |f| %>
-  <% if @event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this admin_event from being saved:</h2>
+<%= form_for [:admin, @event], :html => { :class => 'form-horizontal' } do |f| %>
+  <%= render 'shared/admin/error_messages', :target => @event %>
+  
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Event</legend>
 
-      <ul>
-      <% @event.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <div class="control-group">
+      <%= f.label :name, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :name, :class => 'text_field' %>
+      </div>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description, {:size => "40x6"} %>
-  </div>
-  <div class="field">
-    <%= f.label :day %><br />
-    <%= f.text_field :day %>
-  </div>
-  <div class="field">
-    <%= f.label :time %><br />
-    <%= f.text_field :time %>
-  </div>
+    <div class="control-group">
+      <%= f.label :description, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :description, :class => 'text_field' %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :month %><br />
-    <%= f.text_field :month %>
-  </div>
-  <div class="field">
-    <%= f.label :year %><br />
-    <%= f.text_field :year %>
-  </div>
-  <div class="field">
-    <%= f.label :organizer %><br />
-    <%= f.text_field :organizer %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :location_url %><br />
-    <%= f.text_field :location_url %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </div>
-  <div class="field">
-    <%= f.label :icon %><br />
-    <%= f.select(:icon, options_for_select([['code', 'code'], ['meet', 'meet'], ['conf', 'conf'],['beer', 'beer'] ])) %>
-    <!--<%= f.text_field :icon %>-->
-  </div>
-  <div class="field">
-    <%= f.label :follow %><br />
-    <%= f.text_field :follow %>
-  </div>
+    <div class="control-group">
+      <%= f.label :day, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :day, :class => 'text_field' %>
+      </div>
+    </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="control-group">
+      <%= f.label :month, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :month, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :year, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :year, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :time, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :time, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :organizer, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :organizer, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :location, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :location, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :location_url, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :location_url, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :url, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :url, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :icon, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.select :icon, event_icon_select_options, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :follow, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :follow, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', admin_events_path, :class => 'btn' %>
+    </div>
+  </fieldset>
 <% end %>
