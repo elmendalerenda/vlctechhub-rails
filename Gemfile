@@ -4,6 +4,7 @@ gem 'rails', '3.2.1'
 
 gem 'mongoid', '~> 2.4.4'
 gem 'dynamic_form'
+gem 'twitter-bootstrap-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -18,7 +19,6 @@ group :assets do
   gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'
