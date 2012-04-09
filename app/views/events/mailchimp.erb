@@ -509,7 +509,7 @@
 
         <tr><td valign="top">
             <h2><span class="<%= event['icon'] %> h2"><%= event['name'] %></span></h2>
-            <div><%= event['description'] %>
+            <div><%= event['description'].html_safe %>
             <a href="<%= event['follow'] %>" class="more">+</a> </div>
 
 
