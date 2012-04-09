@@ -22,7 +22,10 @@ class EventsController < ApplicationController
   end
 
   def show
-    @events = Event.all(sort: [[:month, :asc],[:day, :asc]])
+    year = params[:year].to_i
+    month = params[:month].to_i
+    
+    @events = Event.all(conditions: {'year' =>year, 'month' => month}, sort: [[:month, :asc],[:day, :asc]])
 
     @events = clean_events(@events)
     @events = add_week_day(@events)
