@@ -8,7 +8,6 @@ class Event
   field :organizer
   field :location
   field :location_url
-  field :url
   field :time
   field :icon
   field :follow
