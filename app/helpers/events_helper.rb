@@ -9,6 +9,22 @@ def clean_events(events)
     events.collect{ |x| x.as_document.reject{|key, v| attributes_to_remove.include?(key)} }
 end
 
+def add_images(events)
+
+ events.each do |x|
+      case x['icon']
+        when 'code'
+          x['image'] = 'http://vlctechhub.org/img/laptop.png'
+        when 'beer'
+          x['image'] = 'http://vlctechhub.org/img/beer-mug.png'
+        when 'conf'
+          x['image'] = 'http://vlctechhub.org/img/microphone.png'
+        when 'meet'
+          x['image'] = 'http://vlctechhub.org/img/gathering.png'
+      end
+    end
+end
+
 def add_week_day(events)
   events.each {|x|
     wday = Time.local(x['year'], x['month'], x['day']).wday
