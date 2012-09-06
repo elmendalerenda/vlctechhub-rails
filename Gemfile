@@ -21,7 +21,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-#gem 'jquery-rails'
+gem 'jquery-rails'
 
 gem "ckeditor", "3.7.0.rc3"
 
